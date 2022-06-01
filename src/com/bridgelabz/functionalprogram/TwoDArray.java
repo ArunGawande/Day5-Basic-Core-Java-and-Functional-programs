@@ -1,0 +1,44 @@
+package com.bridgelabz.functionalprogram;
+
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class TwoDArray 
+{
+	public static void arrayOperations()
+    {
+        Scanner scanner = new Scanner(System.in);
+        PrintWriter writer = new PrintWriter(System.out);
+        System.out.println("Enter the Rows and Columns to form a MATRIX: ");
+        int rows = scanner.nextInt();
+        int colm = scanner.nextInt();
+        int[][] array = new int[rows][colm]; // declaring array
+        System.out.println("Enter array elements: ");
+            // taking inputs for rows
+        for (int i = 0; i < rows; i++)
+        {
+                // taking inputs for columns
+            for (int j = 0; j < colm; j++)
+            {
+                array[i][j] = scanner.nextInt();
+            }
+        }
+            scanner.close();
+            // printing array elements
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < colm; j++)
+                {
+                    writer.print(array[i][j] + " ");
+
+                }
+                writer.println();
+            }
+            writer.close();
+    }
+
+        public static void main(String[] args)
+        {
+            arrayOperations();
+        }
+}
